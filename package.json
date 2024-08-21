@@ -1,12 +1,24 @@
 {
-    "name": "japanese-conjugation",
-    "version": "0.0.0",
-    "description": "Conjugate Japanese verbs",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": "github:miikaeru/japanese-conjugation",
-    "author": "Miikaeru",
-    "license": "MIT"
+  "name": "japanese-conjugation",
+  "version": "0.0.0",
+  "description": "Conjugate Japanese verbs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "repository": "github:miikaeru/japanese-conjugation",
+  "author": "Miikaeru",
+  "license": "MIT",
+  "devDependencies": {
+    "gts": "^5.3.1",
+    "typescript": "^5.4.3",
+    "@types/node": "20.12.7"
+  }
 }
